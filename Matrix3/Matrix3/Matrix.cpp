@@ -1,7 +1,4 @@
 #include "Matrix.h"
-#include<string>
-#include<istream>
-using namespace std;
 
 Matrix::Matrix(int _size) {
 	size = _size;
