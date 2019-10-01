@@ -1,7 +1,9 @@
 #pragma once
-#include<iostream>
+#include<istream>
 #include<ostream>
+
 using namespace std;
+
 template<class T>
 class TVector {
 protected:
@@ -64,8 +66,6 @@ template<class T>
 inline TVector<T>::~TVector() {
 	delete[] mem;
 }
-
-
 
 template<class T>
 inline bool TVector<T>::operator==(const TVector<T>& tmp) const {

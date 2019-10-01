@@ -1,6 +1,8 @@
 #include<iostream>
+#include<locale.h>
 #include"TMatrix.h"
 #include"TVector.h"
+
 using namespace std;
 
 int main() {

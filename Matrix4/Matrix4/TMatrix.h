@@ -1,5 +1,8 @@
 #pragma once
 #include"TVector.h"
+
+using namespace std;
+
 template<class T>
 class TMatrix : public TVector<TVector<T> > {
 public:
@@ -16,7 +19,7 @@ public:
 	TVector<T> &operator[](int pos);
 	TMatrix<T> operator*(const TMatrix<T> & tmp);
 	friend istream & operator >>(istream & in, TMatrix<T> &tmp) {
-		int x;
+		T x;
 		for (int i = 0; i < tmp.size; i++) {
 			for (int j = 0; j < tmp.size; j++) {
 				if (j >= tmp[i].get_start()) in >> tmp[i][j];
