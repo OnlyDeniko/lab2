@@ -1,3 +1,4 @@
+#include<istream>
 #include<ostream>
 
 template<class T>
@@ -8,10 +9,10 @@ protected:
 	int start;
 public:
 	TVector<T>(int _size = 0, int _start = 0);
-	int get_size() {
+	int get_size() const{
 		return this->size;
 	}
-	int get_start() {
+	int get_start() const{
 		return this->start;
 	}
 	TVector<T>(const TVector<T> & tmp);
@@ -62,8 +63,6 @@ template<class T>
 inline TVector<T>::~TVector() {
 	delete[] mem;
 }
-
-
 
 template<class T>
 inline bool TVector<T>::operator==(const TVector<T>& tmp) const {

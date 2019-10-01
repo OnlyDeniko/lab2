@@ -4,7 +4,7 @@ template<class T>
 class TMatrix : public TVector<TVector<T> > {
 public:
 	TMatrix<T>(int _size = 0);
-	int get_size() {
+	int get_size() const{
 		return this->size;
 	}
 	TMatrix<T>(const TMatrix<T> & tmp);

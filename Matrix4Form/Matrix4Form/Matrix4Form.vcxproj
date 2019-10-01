@@ -140,8 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="TMatrix.cpp" />
-    <ClCompile Include="TVector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libraries.h" />
