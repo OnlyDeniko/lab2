@@ -1,5 +1,5 @@
 #include<iostream>
-#include<locale.h>
+#include<clocale>
 #include"TMatrix.h"
 #include"TVector.h"
 
@@ -8,7 +8,7 @@ using namespace std;
 int main() {
 	int n;
 	setlocale(LC_ALL, "Rus");
-	cout << "¬ведите размер векторов: ";
+	/*cout << "¬ведите размер векторов: ";
 	cin >> n;
 	TVector<int> a(n), b(n), c;
 	cin >> a >> b;
@@ -33,6 +33,8 @@ int main() {
 	cout << "—умма векторов: " << c << '\n';
 	c = a - b;
 	cout << "A - B: " << c << '\n';
+	int res = a * b;
+	cout << "A * B =" << res << '\n';*/
 	cout << "¬ведите размер матриц: ";
 	cin >> n;
 	TMatrix<int> aa(n), bb(n), cc;

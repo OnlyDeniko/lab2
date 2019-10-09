@@ -279,8 +279,8 @@ namespace Matrix4Form {
 		System::Void SetSizeButton_Click(System::Object^  sender, System::EventArgs^  e) {
 			int gg = System::Convert::ToInt32(SizeBox->Text);
 			//MessageBox::Show(System::Convert::ToString(gg));
-			if (gg >= int(1) && gg < 20) {
-				SizeBox->ReadOnly = true;
+			if (gg >= int(1) && gg < 100) {
+				//SizeBox->ReadOnly = true;
 				GridA->RowCount = gg;
 				GridA->ColumnCount = gg;
 				GridB->RowCount = gg;
@@ -295,6 +295,10 @@ namespace Matrix4Form {
 						GridB->Rows[i]->Cells[j]->Value = "0";
 						GridA->Rows[i]->Cells[j]->ReadOnly = true;
 						GridB->Rows[i]->Cells[j]->ReadOnly = true;
+					}
+					for (int j = i; j < size; j++) {
+						GridA->Rows[i]->Cells[j]->Value = "";
+						GridB->Rows[i]->Cells[j]->Value = "";
 					}
 				}
 			}
