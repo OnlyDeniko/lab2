@@ -16,7 +16,7 @@ public:
 	TMatrix<T> & operator=(const TMatrix<T> & tmp);
 	TMatrix<T> operator+(TMatrix<T> & tmp);
 	TMatrix<T> operator-(TMatrix<T> & tmp);
-	TVector<T> &operator[](int pos);
+	TVector<T> &operator[](const int pos);
 	TMatrix<T> operator*(const TMatrix<T> & tmp);
 	friend istream & operator >>(istream & in, TMatrix<T> &tmp) {
 		T x;
@@ -89,7 +89,7 @@ inline TMatrix<T> TMatrix<T>::operator-(TMatrix<T>& tmp) {
 }
 
 template<class T>
-inline TVector<T>& TMatrix<T>::operator[](int pos) {
+inline TVector<T>& TMatrix<T>::operator[](const int pos) {
 	if (pos < 0 || pos >= this->size) throw - 1;
 	return this->mem[pos];
 }
